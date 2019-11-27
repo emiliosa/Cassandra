@@ -20,7 +20,7 @@ public class Conexion {
     private static Session getConexion() {
         if (session == null) {
             session = Cluster.builder()
-                    .addContactPoint("0.0.0.0")
+                    .addContactPoint("127.0.0.1")
                     .withPort(9042)
                     .build()
                     .connect();
